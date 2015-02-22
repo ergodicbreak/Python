@@ -110,7 +110,7 @@
 
 (defn find-venv [obj]
   (let [to-find (if (platform/win?)
-                  "bin\\python"
+                  "scripts\\python.exe"
                   "bin/python")
         vpy (files/walk-up-find (:path obj) to-find)]
     (if (empty? vpy)
